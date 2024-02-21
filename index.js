@@ -1058,9 +1058,9 @@ async function pushCSV(data) {
     // Prepare path/filename, repo/org context and commit name/email variables
     let reportPath
     if (diffReport === 'true') {
-      reportPath = { path: `reports/NetAppDocOps-repo-metrics-report-${fileDate}.csv` }
+      reportPath = { path: `reports/${org}-repo-metrics-report-${fileDate}.csv` }
     } else {
-      reportPath = { path: `reports/NetAppDocOps-${new Date().toISOString().substring(0, 19) + 'Z'}-${fileDate}.csv` }
+      reportPath = { path: `reports/${org}-${new Date().toISOString().substring(0, 19) + 'Z'}-${fileDate}.csv` }
     }
     const opts = {
       owner,
